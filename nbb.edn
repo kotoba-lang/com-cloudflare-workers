@@ -1,0 +1,3 @@
+;; Classpath for nbb. Prefer `nbb -m …` / package.json scripts over bb.edn
+;; (bb is retired as a script host, ADR-2607173000).
+{:paths ["src" "test" "resources"]}

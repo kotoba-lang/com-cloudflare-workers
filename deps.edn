@@ -1,0 +1,19 @@
+;; The pure core (command/policy/admission/receipt) is .cljc and runs under
+;; both nbb and JVM Clojure -- that dual run IS the parity evidence for the
+;; core. nbb is the first-class script host (ADR-2607173000); this alias exists
+;; so the same .cljc is exercised by a second, independent reader/runtime.
+;; The provider is .cljs (workerd) and is tested by `npm test` only.
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}}
+ :aliases
+ {:test {:extra-paths ["test"]
+         :extra-deps {io.github.cognitect-labs/test-runner
+                      {:git/tag "v0.5.1" :git/sha "dfb30dd"}}
+         :main-opts ["-m" "cognitect.test-runner"
+                     "-n" "cloudflare.workers.command-test"
+                     "-n" "cloudflare.workers.policy-test"
+                     "-n" "cloudflare.workers.conformance-test"]
+         :exec-fn cognitect.test-runner.api/test}
+  :lint {:replace-deps {clj-kondo/clj-kondo {:mvn/version "2024.11.14"}}
+         :main-opts ["-m" "clj-kondo.main" "--lint" "src" "test"
+                     "--fail-level" "error"]}}}
