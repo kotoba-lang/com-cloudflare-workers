@@ -40,7 +40,7 @@ Instead this family lives on the **typed effect-command plane** described in
 
 The guest gets no new import, no handle, and no `env`. There is no capability
 for it to leak because it is handed none: it emits *proposals*, and the host
-decides. Design record: **ADR-2607252300**.
+decides. Design record: **ADR-2607253500**.
 
 ## The safety properties, concretely
 

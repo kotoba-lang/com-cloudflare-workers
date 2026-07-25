@@ -8,7 +8,7 @@
 ;; table: D1/KV/R2 are asynchronous and a Cloudflare Worker cannot block a
 ;; guest (no Atomics.wait on the request thread, no JSPI), so a synchronous
 ;; i32-shaped import for these operations could not be honestly implemented.
-;; See ADR-2607252300.
+;; See ADR-2607253500.
 ;;
 ;; Shape follows kotoba-lang/kotoba-lang lang/capability-semantics.edn:
 ;; capabilities are identified by :cap/kind + :cap/resource, grants intersect
@@ -17,7 +17,7 @@
 {:kotoba.capability-descriptors/version 1
  :kotoba.capability-descriptors/family :cloudflare/workers-storage
  :kotoba.capability-descriptors/authority "kotoba-lang/com-cloudflare-workers"
- :kotoba.capability-descriptors/adr "adr-2607252300-kotoba-cloudflare-workers-storage-capabilities"
+ :kotoba.capability-descriptors/adr "adr-2607253500-kotoba-cloudflare-workers-storage-capabilities"
  :kotoba.capability-descriptors/profile :kotoba/app
  :kotoba.capability-descriptors/plane :effect-command
 
