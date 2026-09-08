@@ -1,5 +1,5 @@
 (ns cloudflare.workers.command-test
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [cloudflare.workers.command :as command]))
 
