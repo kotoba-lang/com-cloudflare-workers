@@ -12,7 +12,7 @@
   the current time has taken an authority nobody granted it, and it also stops
   being testable without freezing time. The provider passes the Worker's
   request time down."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn receipt
   "Build one receipt.
