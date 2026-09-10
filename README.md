@@ -108,7 +108,7 @@ reaches `env.DB` without passing the gate.
 
 (provider/execute!
  {:env env                                  ; the Worker's env
-  :policy policy                            ; host-owned, see examples/worker.cljs
+  :policy policy                            ; host-owned, see examples/worker.kotoba
   :commands [{:cmd :cf.d1/exec :binding "APP_DB" :statement "insert-order"
               :params ["o-1" 2]}
              {:cmd :cf.kv/put :binding "SESSIONS" :key "user:42"
@@ -132,7 +132,7 @@ clojure -M:lint
 
 The dual run is the parity evidence for the core: one set of `.cljc` sources,
 two independent readers and runtimes. Conformance fixtures live in
-`test/cloudflare/workers/conformance_test.cljc`, with one fixture per denial
+`test/cloudflare/workers/conformance_test.kotoba`, with one fixture per denial
 reason -- an enumerated reason no test can produce is a reason nobody has
 checked is reachable.
 

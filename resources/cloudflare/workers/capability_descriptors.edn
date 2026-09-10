@@ -118,7 +118,7 @@
      :detail "cloudflare.workers.provider; binding absence and shape mismatch both deny."}
   4 {:item "Positive and denial conformance fixtures"
      :status :done
-     :detail "test/cloudflare/workers/conformance_test.cljc, one fixture per denial reason."}
+     :detail "test/cloudflare/workers/conformance_test.kotoba, one fixture per denial reason."}
   5 {:item "Quota, cancellation, fuel/memory, and audit"
      :status :partial
      :detail "Quota and audit done. Cancellation is the Worker's request abort signal and is not yet threaded through execute!."}
