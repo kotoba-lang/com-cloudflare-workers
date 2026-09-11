@@ -2,6 +2,6 @@
   "private": true,
   "name": "com-cloudflare-workers",
   "scripts": {
-    "test": "nbb --classpath \"src:test\" bin/run_tests.kotoba"
+    "test": "kbb --backend sci --classpath \"src:test\" bin/run_tests.kotoba"
   }
 }

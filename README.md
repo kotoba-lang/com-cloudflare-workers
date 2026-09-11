@@ -126,8 +126,8 @@ bindings do not match its policy.
 
 ```bash
 npm test                 # nbb: full suite incl. the .cljs provider (42 tests)
-clojure -M:test          # JVM: the same .cljc core, second runtime (34 tests)
-clojure -M:lint
+kbb -M:test          # JVM: the same .cljc core, second runtime (34 tests)
+kbb -M:lint
 ```
 
 The dual run is the parity evidence for the core: one set of `.cljc` sources,
