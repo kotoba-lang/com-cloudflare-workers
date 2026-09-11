@@ -1,10 +1,10 @@
 ;; nbb test runner -- nbb is the script host for this repo (ADR-2607173000;
-;; bb is retired). Run from the repo root:
+;; kbb -M:is retired). Run from the repo root:
 ;;
-;;   nbb --classpath "src:test" bin/run_tests.cljs
+;;   kbb --backend sci --classpath "src:test" bin/run_tests.cljs
 ;;
 ;; The pure core (command/policy/admission/receipt) is .cljc and also runs
-;; under JVM Clojure via `clojure -M:test`; the provider is .cljs and runs
+;; under JVM Clojure via `kbb -M:test`; the provider is .cljs and runs
 ;; here only.
 (ns run-tests
   (:require [cljs.test :as t]
